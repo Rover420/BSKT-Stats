@@ -1,0 +1,217 @@
+.MainWrapper {
+    padding: 0px 10%;
+    padding-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    padding: 1rem;
+    background: none rgba(7, 17, 98, 0.75);
+    border: 1px solid rgb(86, 90, 105);
+    box-shadow: rgb(0, 5, 55) 0px 0px 80px 0px;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.container:last-child {
+    border-bottom: none;
+}
+
+.inside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tokenaddr {
+    font-size: 32px;
+    text-align: center;
+    word-break: break-all;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal;
+    padding: 0 20px;
+}
+
+.container button {
+    margin: 15px 0px 10px 0px;
+}
+
+.valuewrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.valuewrapper .wrapper {
+    margin: 16px;
+    width: 290px;
+}
+
+.valuewrapper span {
+    margin: 5px;
+}
+
+.valuewrapper span:last-of-type {
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.gridwrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.calculator p {
+    font-size: 16px;
+}
+
+.calculator {
+    gap: 20px;
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: 600px;
+}
+
+.rangewrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.calculator label {
+    margin-top: 30px;
+}
+
+.calculator label:first-of-type {
+    margin-top: 0px;
+}
+
+.inp {
+    background: none;
+    text-align: center;
+    border: none;
+    font-size: 32px;
+    border-bottom: 1px solid #fff;
+    padding: 5px;
+    width: 60%;
+    transition: border-radius .2s;
+}
+
+.inp:focus {
+    border-radius: 20px;
+}
+
+.number {
+    background: none;
+    border: 1px solid white;
+    text-align: center;
+    font-size: 24px;
+    padding: 5px;
+    max-width: 140px;
+    border-radius: 8px;
+    transition: border .2s;
+}
+
+.number:focus {
+    border: 1px solid rgb(16, 124, 248);
+}
+
+.range {
+    width: 100%;
+}
+
+.range::-webkit-slider-thumb {
+    cursor: grab;
+    transform: scale(1.5);
+}
+
+.range::-webkit-slider-thumb:active {
+    cursor: grabbing;
+}
+
+.range::-moz-range-thumb {
+    cursor: grab;
+    transform: scale(1.5);
+}
+
+.range::-moz-range-thumb:active {
+    cursor: grabbing;
+}
+
+@media screen and (max-width: 800px) {
+    .rangewrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .tokenaddr {
+        font-size: 26px;
+    }
+    .inp {
+        width: 80%;
+    }
+}
+
+.burn {
+    padding: 2rem 3rem;
+}
+
+.links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px;
+    gap: 10px;
+    width: fit-content;
+}
+
+.links {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0px;
+}
+
+.links span {
+    font-weight: normal;
+}
+
+.footer {
+    font-size: 12px;
+    text-align: center;
+    margin: 30px;
+}
