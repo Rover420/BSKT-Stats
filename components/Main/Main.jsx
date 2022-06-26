@@ -13,7 +13,7 @@ import Moralis from 'moralis';
 
 const Main = ({ filteredCoins, ethSupply }) => {
 
-    const [supply, setSupply] = useState('');
+    const [supply, setSupply] = useState(14650000);
     const [timer, setTimer] = useState(0);
 
     const { isInitialized } = useMoralis();
