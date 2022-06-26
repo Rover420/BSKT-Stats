@@ -14,7 +14,7 @@ const Links = () => {
                 <span>CoinMarketCal</span>
             </a>
             <a href="https://coinmarketcap.com/currencies/basketcoin/" target='_blank'>
-                <Image src='/coinmarketcap.png' width={30} height={30} />
+                <Image src='/coinmarketcap.svg' width={30} height={30} />
                 <span>CoinMarketCap</span>
             </a>
             <a href="https://coinpaprika.com/coin/bskt-basketcoin/" target='_blank'>
