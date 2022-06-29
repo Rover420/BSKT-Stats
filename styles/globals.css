@@ -9,10 +9,6 @@ body {
   scroll-behavior: smooth;
 }
 
-#__next {
-  background: url(/waves.png) top/100% no-repeat,linear-gradient(to top left,rgba(0,5,55,.44) 0,#0a1992);
-}
-
 html {
   width: 100vw;
   background-color: #000537;
@@ -22,7 +18,7 @@ body {
   min-height: 100vh;
   overflow: overlay;
   overflow-x: hidden;
-  background: url(/static/media/bg-shape.2098afb6.png) top/100% no-repeat,linear-gradient(to top left,rgba(0,5,55,.4392156862745098) 0,#0a1992);
+  background: url(/waves.png) top/100% no-repeat,linear-gradient(to top left,rgba(0,5,55,.4392156862745098) 0,#0a1992);
 }
 
 a {
