@@ -58,8 +58,8 @@ const Navbar = () => {
             </div>
             <div className={styles.loginwrapper}>
                 {!check ? 
-                <a className={`${styles.login} ${styles.install}`} href='https://metamask.io' target="_blank">CLICK TO INSTALL METAMASK</a> : 
-                !isAuthenticated ? <button className={styles.login} onClick={handleAuth}>CONNECT</button> :
+                <a className={`btn ${styles.install}`} href='https://metamask.io' target="_blank">CLICK TO INSTALL METAMASK</a> : 
+                !isAuthenticated ? <button className='btn' onClick={handleAuth}>CONNECT</button> :
                 <div className={styles.useraddr} onClick={handleLogout}>{addr}</div>}
             </div>
         </nav>
