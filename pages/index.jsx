@@ -9,7 +9,7 @@ import Main from '../components/Main/Main';
 
 export default function Home({ filteredCoins }) {
 
-  const [ethSupply, setEthSupply] = useState('');
+  const [ethSupply, setEthSupply] = useState();
   const [timer, setTimer] = useState(0);
 
   const { isInitialized } = useMoralis();
