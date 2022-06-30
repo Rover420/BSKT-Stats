@@ -26,10 +26,17 @@
     width: 100%;
     overflow: hidden;
     border-bottom: 1px solid rgba(255, 255, 255, .2);
+    overflow-x: hidden;
+    overflow-y: contain;
+    position: relative;
 }
 
 .container:last-child {
     border-bottom: none;
+}
+
+.wrapper:first-of-type {
+    max-width: 878px;
 }
 
 .inside {
@@ -54,6 +61,51 @@
 
 .container button {
     margin: 15px 0px 10px 0px;
+}
+
+.slider {
+    width: 200%;
+    display: flex;
+    flex-direction: row;
+    transition: all .3s;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    transition: all .3s;
+    z-index: 5;
+}
+
+.arrow:hover {
+    background: rgba(255, 255, 255, .2);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .4);
+}
+
+.slide {
+    transform: translateX(-50%);
+}
+
+.card {
+    transition: all .5s;
+}
+
+.right {
+    right: 3%;
+    transform: rotate(270deg) translateX(50%);
+}
+
+.left {
+    left: 3%;
+    transform: rotate(90deg) translateX(-50%);
 }
 
 .valuewrapper {
@@ -146,28 +198,6 @@
     border: 1px solid rgb(16, 124, 248);
 }
 
-.range {
-    width: 100%;
-}
-
-.range::-webkit-slider-thumb {
-    cursor: grab;
-    transform: scale(1.5);
-}
-
-.range::-webkit-slider-thumb:active {
-    cursor: grabbing;
-}
-
-.range::-moz-range-thumb {
-    cursor: grab;
-    transform: scale(1.5);
-}
-
-.range::-moz-range-thumb:active {
-    cursor: grabbing;
-}
-
 @media screen and (max-width: 800px) {
     .rangewrapper {
         flex-direction: column;
@@ -180,6 +210,11 @@
     }
     .inp {
         width: 80%;
+    }
+    .arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
     }
 }
 
@@ -214,4 +249,49 @@
     font-size: 12px;
     text-align: center;
     margin: 30px;
+}
+
+.error {
+    position: relative;
+    max-width: 600px;
+    padding: 10px 40px;
+    position: fixed;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+.error p{
+    font-size: 26px;
+}
+
+.error button {
+    margin: 10px 40px 30px 40px;
+}
+
+.show {
+    animation: show .7s forwards;
+}
+
+@keyframes show {
+    0% {visibility: visible; top: -300px;}
+    60% {top: 50%;}
+    100% {top: 40%; visibility: visible;}
+}
+  
+.hide {
+    animation: hide 1s forwards;
+}
+  
+@keyframes hide {
+    0% {visibility: visible; top: 40%;}
+    20% {top: 50%;}
+    100% {top: -300px; visibility: hidden;}
+}
+
+.error .close {
+    position: absolute;
+    top: 7%;
+    right: 5%;
+    font-size: 30px;
+    cursor: pointer;
 }
