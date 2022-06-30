@@ -4,7 +4,7 @@ import react, { useState, useEffect } from 'react';
 
 const Burn = ({ supply, ethSupply }) => {
 
-    const bbburnt = 920205;
+    const bbburnt = 1284050;
 
     return ( 
         <>
