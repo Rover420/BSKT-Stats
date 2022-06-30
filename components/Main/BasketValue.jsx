@@ -22,11 +22,11 @@ const BasketValue = ({ result, supply, prices, filteredCoins }) => {
             <div className={styles.gridwrapper}>
                 <div className={styles.wrapper}>
                     <span>Basket Share Value <br /> (Basket Value / Current Supply)</span>
-                    <span>{supply && (result / supply).toFixed(3)} $</span>
+                    <span>{supply ? supply && (result / supply).toFixed(3) : (result / 14650000).toFixed(3)} $</span>
                 </div>
                 <div className={styles.wrapper}>
                     <span>Value of 1 BSKT <br /> (Current Price)</span>
-                    <span>{filteredCoins && parseFloat(filteredCoins.filter(token => token.symbol === 'bskt').map(ohne => ohne.current_price)).toFixed(3)} $</span>
+                    <span>{filteredCoins.filter(token => token.symbol === 'bskt') ? filteredCoins && parseFloat(filteredCoins.filter(token => token.symbol === 'bskt').map(ohne => ohne.current_price)).toFixed(3) : '0.050'} $</span>
                 </div>
                 <div className={styles.wrapper}>
                     <span>Basket Share Value <br /> (Basket Value / Final Supply)</span>
