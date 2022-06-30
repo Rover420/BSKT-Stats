@@ -50,9 +50,12 @@ const Calculator = ({ price, supply, result }) => {
                 
                 <div className={styles.rangewrapper}>
                     
-                    <input className={styles.range} type="range" value={priceinp} onChange={handlePrice} min='0' max='2' step='0.001' name="price" id="price" />
-                    <input className={styles.number} type="number" value={priceinp} onChange={handlePrice} name="pricenum" id="pricenum" />
-                
+                    <div className={styles.anotherwrapper}>
+                        <input className={styles.range} type="range" value={priceinp} onChange={handlePrice} min='0' max='2' step='0.001' name="price" id="price" />
+                        <p className={`${styles.min} ${styles.minmax}`}>0</p>
+                        <p className={`${styles.max} ${styles.minmax}`}>2</p>
+                    </div>
+                        <input className={styles.number} type="number" value={priceinp} onChange={handlePrice} name="pricenum" id="pricenum" />
                 </div>
                 
                 
@@ -60,7 +63,11 @@ const Calculator = ({ price, supply, result }) => {
                 
                 <div className={styles.rangewrapper}>
                     
-                    <input className={styles.range} type="range" value={total ? total : 2110000} onChange={handleSupply} min='2100000' max={supply ? supply : 14650000} name="total" id="total" />
+                    <div className={styles.anotherwrapper}>
+                        <input className={styles.range} type="range" value={total ? total : 2110000} onChange={handleSupply} min='2100000' max={supply ? supply : 14650000} name="total" id="total" />
+                        <p className={`${styles.minsupply} ${styles.minmax}`}>2.1 M</p>
+                        <p className={`${styles.maxsupply} ${styles.minmax}`}>{supply ? (supply / 1000000).toFixed(2) + ' M' : '14.65 M'}</p>
+                    </div>
                     <input className={styles.number} type="number" value={total ? total : 2110000} onChange={handleSupply} min='2100000' max={supply ? supply : 14650000} name="totalnum" id="totalnum" />
                 
                 </div>
