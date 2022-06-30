@@ -115,7 +115,7 @@ const TokenInfo = ({ supply, ethSupply }) => {
                                     <a className={styles.tokenaddr} href="https://bscscan.com/address/0x4dd1984a706e1c2c227bea67ad2f92dbde30afce" target='_blank'>
                                     0x4Dd1984a706E1c2C227bea67AD2F92dbdE30AfCE
                                     </a>
-                                    <Image src='/link.svg' width={45} height={45} />
+                                    <Image src='/link.svg' width={40} height={40} layout="fixed" />
                                 </span>
                                 <button onClick={checkBSC}>
                                     <Image src='/metamask.svg' alt='MetaMask' height={33} width={33} />
@@ -142,7 +142,7 @@ const TokenInfo = ({ supply, ethSupply }) => {
                                     <a className={styles.tokenaddr} href="https://etherscan.io/token/0xc03841b5135600312707d39eb2af0d2ad5d51a91" target='_blank'>
                                     0xC03841B5135600312707d39Eb2aF0D2aD5d51A91
                                     </a>
-                                    <Image src='/link.svg' width={45} height={45} />
+                                    <Image src='/link.svg' width={40} height={40} layout="fixed" />
                                 </span>
                                 <button onClick={checkEth}>
                                     <Image src='/metamask.svg' alt='MetaMask' height={33} width={33} />
