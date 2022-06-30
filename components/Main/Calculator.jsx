@@ -21,8 +21,10 @@ const Calculator = ({ price, supply, result }) => {
     }
 
     useEffect(() => {
-        if(!total) {
+        if(supply) {
             setTotal(supply);
+        } else {
+            setTotal(14650000)
         }
     }, [supply])
 
@@ -58,8 +60,8 @@ const Calculator = ({ price, supply, result }) => {
                 
                 <div className={styles.rangewrapper}>
                     
-                    <input className={styles.range} type="range" value={total} onChange={handleSupply} min='2100000' max={supply} name="total" id="total" />
-                    <input className={styles.number} type="number" value={total} onChange={handleSupply} min='2100000' max={supply} name="totalnum" id="totalnum" />
+                    <input className={styles.range} type="range" value={total ? total : 2110000} onChange={handleSupply} min='2100000' max={supply ? supply : 14650000} name="total" id="total" />
+                    <input className={styles.number} type="number" value={total ? total : 2110000} onChange={handleSupply} min='2100000' max={supply ? supply : 14650000} name="totalnum" id="totalnum" />
                 
                 </div>
                 
