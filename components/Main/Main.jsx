@@ -13,7 +13,7 @@ import Moralis from 'moralis';
 
 const Main = ({ filteredCoins, ethSupply }) => {
 
-    const [supply, setSupply] = useState(14650000);
+    const [supply, setSupply] = useState();
     const [timer, setTimer] = useState(0);
 
     const { isInitialized } = useMoralis();
@@ -57,7 +57,7 @@ const Main = ({ filteredCoins, ethSupply }) => {
 
     return ( 
         <div className={styles.MainWrapper}>
-            <TokenInfo supply={supply} />
+            <TokenInfo supply={supply} ethSupply={ethSupply} />
             <BasketValue 
                 prices={prices}
                 supply={supply}
