@@ -10,7 +10,6 @@ import Main from '../components/Main/Main';
 export default function Home({ filteredCoins }) {
 
   const [ethSupply, setEthSupply] = useState();
-  const [timer, setTimer] = useState(0);
 
   const { isInitialized } = useMoralis();
 
@@ -25,9 +24,7 @@ export default function Home({ filteredCoins }) {
   });
 
   useEffect(() => {
-      setTimeout(() => {
         runContractFunction();
-      }, 5000);
   }, [isInitialized]);
 
   useEffect(() => {
